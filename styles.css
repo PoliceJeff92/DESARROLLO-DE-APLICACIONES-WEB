@@ -1,0 +1,226 @@
+/* Estilos generales para todo el cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9; /* Un verde muy claro, casi blanco */
+    color: #2e7d32; /* Verde oscuro para el texto principal */
+}
+
+/* Estilos para el encabezado (<header>) */
+header {
+    background-color: #4CAF50; /* Verde brillante */
+    color: white;
+    padding: 1.5em 0; /* Más relleno */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para profundidad */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Título más grande */
+}
+
+/* Estilos para la navegación (<nav>) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0 0; /* Margen superior para separarlo del título */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los ítems se envuelvan en pantallas pequeñas */
+}
+
+nav ul li {
+    margin: 0 20px; /* Más espacio entre enlaces */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+nav ul li a:hover {
+    background-color: #388e3c; /* Verde más oscuro al pasar el ratón */
+}
+
+/* Estilos para el contenido principal (<main>) y las secciones (<section>) */
+main {
+    padding: 30px; /* Más relleno */
+    max-width: 1000px; /* Ancho máximo un poco mayor */
+    margin: 30px auto; /* Más margen */
+    background-color: #ffffff;
+    border-radius: 10px; /* Bordes redondeados para el contenedor principal */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+}
+
+section {
+    margin-bottom: 40px; /* Más margen inferior entre secciones */
+    padding: 25px; /* Más relleno dentro de cada sección */
+    border-bottom: 1px dashed #c8e6c9; /* Línea divisoria punteada, color verde claro */
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Estilos para encabezados (h1, h2, h3, h4) y párrafos (p) */
+h1, h2, h3, h4 {
+    color: #1b5e20; /* Verde muy oscuro para encabezados */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2em; /* Tamaño de h2 */
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.7em; /* Tamaño de h3 */
+    color: #388e3c; /* Verde oscuro */
+}
+
+h4 {
+    font-size: 1.3em; /* Tamaño de h4 */
+    color: #4CAF50; /* Verde brillante */
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 1.2em;
+    color: #424242; /* Gris más oscuro para la legibilidad */
+}
+
+strong {
+    color: #004d40; /* Verde azulado oscuro para énfasis fuerte */
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+    color: #66bb6a; /* Verde claro para énfasis suave */
+}
+
+/* Estilos para imágenes (<img>) y videos (<video>) */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centra la imagen/video */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para multimedia */
+}
+
+/* Estilos para listas ordenadas (<ol>) y desordenadas (<ul>) */
+ol, ul {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    line-height: 1.6;
+}
+
+ol li {
+    font-weight: bold;
+    color: #2e7d32; /* Verde oscuro para ítems de lista ordenada */
+    margin-bottom: 8px;
+}
+
+ul li {
+    color: #424242; /* Gris para ítems de lista desordenada */
+    margin-bottom: 5px;
+}
+
+/* Estilos para la tabla (<table>) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border: 3px solid #81c784; /* Borde de tabla más grueso y verde claro */
+    border-radius: 8px; /* Bordes redondeados para la tabla */
+    overflow: hidden; /* Asegura que los bordes redondeados se vean bien */
+}
+
+th, td {
+    border: 1px solid #a5d6a7; /* Bordes de celda verdes más claros */
+    padding: 12px; /* Más padding en celdas */
+    text-align: left;
+}
+
+th {
+    background-color: #c8e6c9; /* Fondo verde muy claro para encabezados */
+    font-weight: bold;
+    color: #1b5e20; /* Texto verde oscuro */
+}
+
+tbody tr:nth-child(even) { /* Filas pares con un color de fondo diferente */
+    background-color: #f0f4c3; /* Amarillo/verde muy claro */
+}
+
+/* Estilos para el formulario (<form>) */
+form {
+    margin-top: 25px;
+    padding: 30px;
+    border: 2px solid #81c784; /* Borde verde para el formulario */
+    border-radius: 10px; /* Bordes más redondeados */
+    background-color: #fbfcfb; /* Fondo casi blanco para el formulario */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #1b5e20; /* Verde oscuro para etiquetas */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea { /* Estilo también para el textarea */
+    width: calc(100% - 24px); /* Ajusta el ancho */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #a5d6a7; /* Borde verde claro */
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #4CAF50; /* Resalta el borde al enfocar */
+    outline: none; /* Elimina el contorno azul predeterminado */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Sombra al enfocar */
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50; /* Verde principal para el botón */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+form input[type="submit"]:hover {
+    background-color: #388e3c; /* Verde más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño efecto de levantamiento */
+}
+
+/* Estilos para el pie de página (<footer>) */
+footer {
+    background-color: #1b5e20; /* Verde muy oscuro */
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
