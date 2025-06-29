@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio para que el contenido no se centre verticalmente por defecto */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.controls {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: center;
+    gap: 10px; /* Espacio entre los elementos de control */
+}
+
+.controls input[type="url"] {
+    flex-grow: 1; /* Permite que el input crezca */
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    max-width: 400px; /* Limita el ancho máximo del input */
+}
+
+.controls button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#addImageBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+#addImageBtn:hover {
+    background-color: #0056b3;
+}
+
+#deleteImageBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+#deleteImageBtn:hover {
+    background-color: #c82333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Columnas responsivas */
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    min-height: 200px; /* Asegura un tamaño mínimo para la galería */
+    background-color: #fdfdfd;
+}
+
+.gallery img {
+    width: 100%;
+    height: 150px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Recorta la imagen para que quepa en el contenedor */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+    border: 3px solid transparent; /* Borde transparente por defecto */
+}
+
+.gallery img:hover {
+    transform: scale(1.03); /* Ligero zoom al pasar el ratón */
+}
+
+.gallery img.selected {
+    border: 3px solid #007bff; /* Borde azul para la imagen seleccionada */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Sombra para resaltar */
+}
+
+/* Animaciones (opcional) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.9); }
+}
+
+.gallery img.adding {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.gallery img.removing {
+    animation: fadeOut 0.3s ease-in forwards; /* forwards mantiene el estado final */
+}
+
+@media (max-width: 600px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .controls input[type="url"] {
+        max-width: none;
+    }
+}
